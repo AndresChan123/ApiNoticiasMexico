@@ -4,8 +4,8 @@ const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT } = require('./config.js
 
 const connection = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
     host: DB_HOST,
-    port: DB_PORT, // Usamos el puerto que configuramos
-    dialect: 'mysql',
+    port: DB_PORT,
+    dialect: 'mariadb' // <-- ESTE ES EL CAMBIO
 });
 
 connection.authenticate()
